@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-title class="ion-text-center">
+      Add Employee Record
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="ion-no-padding">
+    <ion-card-header class="ion-no-padding">
+      <ion-img src="\assets\icon\student.jpg"></ion-img>
+    </ion-card-header>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating"> Employee Name </ion-label>
+      <ion-input [(ngModel)]="emp_name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-list radio-group [(ngModel)]="emp_gender">
+      <ion-label> Gender </ion-label>
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio value="friends" checked></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio value="family" checked></ion-radio>
+      </ion-item>
+    </ion-list>
+
+
+    <ion-item>
+      <ion-label position="floating"> Email Address </ion-label>
+      <ion-input [(ngModel)]="email" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Contact Number </ion-label>
+      <ion-input [(ngModel)]="contact_number" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Home Address </ion-label>
+      <ion-input [(ngModel)]="home_add" type="text"></ion-input>
+    </ion-item>
+
+
+
+    <!-- Add Button -->
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" (click)="addStudent()" color="danger" shape="full" expand="block">
+          Add Employee Record
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
